@@ -5,7 +5,7 @@ import labBackground from "@/assets/lab-background.jpg";
 const Index = () => {
   // TODO: Replace this placeholder with your actual WhatsApp link
   // Format: https://wa.link/yourlink or https://wa.me/491234567890?text=Your%20pre-filled%20message
-  const whatsappLink = "https://wa.me/491234567890?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20professionelles%20Gespr%C3%A4ch";
+  const whatsappLink = "https://wa.link/e0s9e8";
 
   return (
     <main className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">

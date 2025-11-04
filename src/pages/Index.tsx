@@ -6,6 +6,16 @@ const Index = () => {
   // TODO: Replace this placeholder with your actual WhatsApp link
   // Format: https://wa.link/yourlink or https://wa.me/491234567890?text=Your%20pre-filled%20message
   const whatsappLink = "https://wa.link/e0s9e8";
+ 
+  const handleWhatsAppClick = () => {
+    if (typeof === 'function') {
+       fbq('track', 'Contact');
+    }
+
+    setTimeout(() => {
+      window.location.href = whatsappLink;
+    })
+  };
 
   return (
     <main className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">
@@ -34,9 +44,9 @@ const Index = () => {
             asChild
             size="lg"
             className="w-full max-w-md h-16 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl"
+            onClick={handleWhatsAppClick}
           >
-            <a 
-              href={whatsappLink}
+            <a
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3"

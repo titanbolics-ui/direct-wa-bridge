@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import labBackground from "@/assets/lab-background.jpg";
 
 const Index = () => {
   // TODO: Replace this placeholder with your actual WhatsApp link
@@ -7,8 +8,16 @@ const Index = () => {
   const whatsappLink = "https://wa.me/491234567890?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20professionelles%20Gespr%C3%A4ch";
 
   return (
-    <main className="min-h-screen bg-background flex items-center justify-center px-4 py-8">
-      <div className="max-w-2xl w-full text-center space-y-8 animate-in fade-in duration-700">
+    <main className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">
+      {/* Dark blurred laboratory background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${labBackground})` }}
+      >
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-3xl" />
+      </div>
+      {/* Content - elevated above background */}
+      <div className="relative z-10 max-w-2xl w-full text-center space-y-8 animate-in fade-in duration-700">
         {/* Main Headline */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight">
           Ein Schritt entfernt vom professionellen Gespräch

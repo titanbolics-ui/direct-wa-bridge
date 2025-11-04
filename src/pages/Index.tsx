@@ -1,3 +1,4 @@
+declare const fbq: any;
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import labBackground from "@/assets/lab-background.jpg";
@@ -8,7 +9,7 @@ const Index = () => {
   const whatsappLink = "https://wa.link/e0s9e8";
  
   const handleWhatsAppClick = () => {
-    if (typeof == 'function') {
+    if (typeof === 'function') {
        fbq('track', 'Contact');
     }
 

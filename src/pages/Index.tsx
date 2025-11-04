@@ -8,7 +8,7 @@ const Index = () => {
   const whatsappLink = "https://wa.link/e0s9e8";
  
   const handleWhatsAppClick = () => {
-    if (typeof === 'function') {
+    if (typeof == 'function') {
        fbq('track', 'Contact');
     }
 

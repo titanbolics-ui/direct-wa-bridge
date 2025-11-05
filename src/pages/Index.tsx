@@ -6,21 +6,22 @@ const Index = () => {
   // TODO: Replace this placeholder with your actual WhatsApp link
   // Format: https://wa.link/yourlink or https://wa.me/491234567890?text=Your%20pre-filled%20message
   const whatsappLink = "https://wa.link/e0s9e8";
- 
+
   const handleWhatsAppClick = () => {
     if (window.fbq) {
-       window.fbq('track', 'Contact');
+      console.log("Facebook Pixel: Tracking 'Contact' event");
+      window.fbq("track", "Contact");
     }
 
     setTimeout(() => {
       window.location.href = whatsappLink;
-    }, 150)
+    }, 150);
   };
 
   return (
     <main className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">
       {/* Dark blurred laboratory background */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${labBackground})` }}
       >
@@ -35,7 +36,8 @@ const Index = () => {
 
         {/* Subheadline */}
         <h2 className="text-lg md:text-xl lg:text-2xl text-muted-foreground font-medium max-w-xl mx-auto">
-          Wir schätzen Ihre Diskretion. Setzen wir die Konversation auf WhatsApp fort.
+          Wir schätzen Ihre Diskretion. Setzen wir die Konversation auf WhatsApp
+          fort.
         </h2>
 
         {/* CTA Button - The star of the show */}
